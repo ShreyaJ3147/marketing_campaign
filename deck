@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Bebas+Neue&family=Playfair+Display:ital@1&family=Space+Mono:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.page{width:1280px;height:720px;position:relative;overflow:hidden;font-family:'Space Mono',monospace;}
+
+/* ========= SLIDE 1: COVER ========= */
+.s1{background:#0A0A0A;}
+.s1 .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,255,100,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,100,0.06) 1px,transparent 1px);background-size:40px 40px;}
+.s1 .glitch-title{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
+.s1 .glitch-title h1{font-family:'Bebas Neue',sans-serif;font-size:110px;color:#fff;letter-spacing:0.05em;line-height:0.9;text-shadow:3px 0 #00FF64, -3px 0 #FF003C;}
+.s1 .glitch-title h1 span{color:#00FF64;}
+.s1 .sub{font-family:'Space Mono',monospace;font-size:13px;color:#555;letter-spacing:0.2em;text-transform:uppercase;margin-top:20px;}
+.s1 .tag1{position:absolute;top:40px;left:48px;background:#00FF64;color:#0A0A0A;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;padding:4px 12px;letter-spacing:0.15em;}
+.s1 .tag2{position:absolute;bottom:40px;right:48px;border:1px solid #222;color:#444;font-size:10px;padding:4px 12px;letter-spacing:0.15em;}
+.s1 .corner{position:absolute;width:60px;height:60px;border-color:#00FF64;border-style:solid;}
+.s1 .tl{top:28px;left:28px;border-width:2px 0 0 2px;}
+.s1 .tr{top:28px;right:28px;border-width:2px 2px 0 0;}
+.s1 .bl{bottom:28px;left:28px;border-width:0 0 2px 2px;}
+.s1 .br{bottom:28px;right:28px;border-width:0 2px 2px 0;}
+
+/* ========= SLIDE 2: Acoustic Glitch — Scenario ========= */
+.s2{background:#080808;}
+.s2 .left{position:absolute;left:0;top:0;width:520px;height:100%;background:#0D0D0D;border-right:1px solid #1A1A1A;padding:56px 48px;}
+.s2 .cam-label{font-size:9px;letter-spacing:0.2em;color:#00FF64;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:8px;}
+.s2 .cam-dot{width:7px;height:7px;border-radius:50%;background:#00FF64;animation:blink 1s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0;}}
+.s2 .campaign-name{font-family:'Bebas Neue',sans-serif;font-size:72px;color:#fff;line-height:0.9;letter-spacing:0.03em;}
+.s2 .campaign-name span{color:#00FF64;display:block;}
+.s2 .vibe-tag{display:inline-block;margin-top:16px;background:#00FF64;color:#000;font-size:10px;font-weight:700;padding:4px 12px;letter-spacing:0.12em;}
+.s2 .scenario-label{margin-top:28px;font-size:9px;letter-spacing:0.2em;color:#444;text-transform:uppercase;border-top:1px solid #1A1A1A;padding-top:20px;}
+.s2 .scenario-text{margin-top:10px;font-family:'Caveat',cursive;font-size:18px;color:#999;line-height:1.5;}
+.s2 .right{position:absolute;right:0;top:0;width:760px;height:100%;padding:56px 48px;}
+.s2 .right-label{font-size:9px;letter-spacing:0.2em;color:#333;text-transform:uppercase;margin-bottom:28px;}
+.s2 .execution-cards{display:flex;flex-direction:column;gap:16px;}
+.s2 .ecard{border:1px solid #1A1A1A;padding:16px 20px;position:relative;}
+.s2 .ecard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#00FF64;}
+.s2 .ecard-label{font-size:9px;letter-spacing:0.15em;color:#00FF64;text-transform:uppercase;margin-bottom:6px;}
+.s2 .ecard-text{font-family:'Caveat',cursive;font-size:17px;color:#ccc;line-height:1.4;}
+.s2 .noise{position:absolute;bottom:0;left:520px;right:0;height:4px;background:repeating-linear-gradient(90deg,#00FF64 0,#00FF64 3px,transparent 3px,transparent 8px);}
+
+/* ========= SLIDE 3: Acoustic Glitch — Visuals ========= */
+.s3{background:#050505;}
+.s3 .top-bar{position:absolute;top:0;left:0;right:0;height:56px;background:#0D0D0D;border-bottom:1px solid #1A1A1A;display:flex;align-items:center;padding:0 48px;gap:20px;}
+.s3 .tb-item{font-size:10px;letter-spacing:0.15em;color:#333;text-transform:uppercase;}
+.s3 .tb-item.active{color:#00FF64;}
+.s3 .content{position:absolute;top:56px;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#111;}
+.s3 .cell{background:#0A0A0A;padding:32px 28px;display:flex;flex-direction:column;justify-content:space-between;}
+.s3 .cell-num{font-family:'Bebas Neue',sans-serif;font-size:80px;color:#111;line-height:1;}
+.s3 .cell-icon{font-size:36px;margin-bottom:12px;}
+.s3 .cell-head{font-size:10px;letter-spacing:0.15em;color:#00FF64;text-transform:uppercase;margin-bottom:8px;}
+.s3 .cell-body{font-family:'Caveat',cursive;font-size:17px;color:#888;line-height:1.5;}
+.s3 .cell.highlight{background:#00FF64;}
+.s3 .cell.highlight .cell-num{color:#00CC50;}
+.s3 .cell.highlight .cell-head{color:#000;}
+.s3 .cell.highlight .cell-body{color:#003A18;font-weight:700;}
+.s3 .glitch-bar{position:absolute;bottom:0;left:0;right:0;height:6px;background:repeating-linear-gradient(90deg,#00FF64 0,#00FF64 20px,#FF003C 20px,#FF003C 40px,#0A0A0A 40px,#0A0A0A 60px);}
+
+/* ========= SLIDE 4: Redacted — Scenario ========= */
+.s4{background:#F5F5F0;}
+.s4 .header{position:absolute;top:0;left:0;right:0;height:80px;background:#0A0A0A;display:flex;align-items:center;padding:0 56px;gap:20px;}
+.s4 .header-title{font-family:'Bebas Neue',sans-serif;font-size:42px;color:#fff;letter-spacing:0.05em;}
+.s4 .header-bar{background:#F5C800;color:#000;font-size:10px;font-weight:700;padding:4px 16px;letter-spacing:0.15em;}
+.s4 .body{position:absolute;top:80px;left:0;right:0;bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.s4 .left-body{padding:40px 48px;border-right:1px solid #E0E0D8;}
+.s4 .right-body{padding:40px 48px;}
+.s4 .scenario-lbl{font-size:9px;letter-spacing:0.2em;color:#999;text-transform:uppercase;margin-bottom:12px;}
+.s4 .scenario-txt{font-family:'Caveat',cursive;font-size:19px;color:#333;line-height:1.6;margin-bottom:24px;}
+.s4 .redact-block{background:#0A0A0A;height:28px;border-radius:2px;margin-bottom:8px;}
+.s4 .redact-sm{width:60%;}
+.s4 .redact-md{width:80%;}
+.s4 .redact-lg{width:100%;}
+.s4 .redact-label{font-size:9px;letter-spacing:0.15em;color:#999;text-transform:uppercase;margin-top:16px;}
+.s4 .venue-tag{margin-top:20px;display:inline-flex;align-items:center;gap:10px;border:1px solid #D0D0C8;padding:8px 16px;}
+.s4 .venue-name{font-family:'Bebas Neue',sans-serif;font-size:28px;color:#0A0A0A;letter-spacing:0.05em;}
+.s4 .venue-sub{font-size:9px;letter-spacing:0.12em;color:#999;text-transform:uppercase;}
+.s4 .vibe-section{margin-top:24px;}
+.s4 .vibe-lbl{font-size:9px;letter-spacing:0.2em;color:#999;text-transform:uppercase;margin-bottom:12px;}
+.s4 .vibe-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.s4 .pill{padding:6px 14px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;}
+.s4 .pill.black{background:#0A0A0A;color:#fff;}
+.s4 .pill.yellow{background:#F5C800;color:#000;}
+.s4 .pill.outline{border:1px solid #0A0A0A;color:#0A0A0A;}
+.s4 .bottom-tape{position:absolute;bottom:0;left:0;right:0;height:8px;background:repeating-linear-gradient(90deg,#F5C800 0,#F5C800 20px,#0A0A0A 20px,#0A0A0A 40px);}
+
+/* ========= SLIDE 5: Redacted — Execution ========= */
+.s5{background:#FAFAF6;}
+.s5 .left-col{position:absolute;left:0;top:0;width:480px;height:100%;background:#0A0A0A;padding:52px 44px;}
+.s5 .campaign-title{font-family:'Bebas Neue',sans-serif;font-size:64px;color:#fff;line-height:0.9;letter-spacing:0.03em;}
+.s5 .campaign-title .redact{display:inline-block;background:#F5C800;color:#F5C800;padding:0 8px;user-select:none;}
+.s5 .hook-label{margin-top:24px;font-size:9px;letter-spacing:0.2em;color:#444;text-transform:uppercase;border-top:1px solid #1A1A1A;padding-top:20px;}
+.s5 .hook-text{margin-top:10px;font-family:'Caveat',cursive;font-size:18px;color:#aaa;line-height:1.5;}
+.s5 .merch-tag{margin-top:24px;background:#F5C800;display:inline-block;padding:8px 16px;}
+.s5 .merch-tag span{font-size:10px;font-weight:700;color:#000;letter-spacing:0.15em;text-transform:uppercase;}
+.s5 .right-col{position:absolute;right:0;top:0;width:800px;height:100%;padding:52px 48px;}
+.s5 .right-label{font-size:9px;letter-spacing:0.2em;color:#999;text-transform:uppercase;margin-bottom:24px;}
+.s5 .exec-list{display:flex;flex-direction:column;gap:16px;}
+.s5 .exec-item{display:flex;gap:16px;padding-bottom:16px;border-bottom:1px solid #E8E8E0;}
+.s5 .exec-item:last-child{border-bottom:none;}
+.s5 .exec-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:#E0E0D8;flex-shrink:0;line-height:1;}
+.s5 .exec-content{}
+.s5 .exec-head{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0A0A0A;margin-bottom:4px;}
+.s5 .exec-body{font-family:'Caveat',cursive;font-size:17px;color:#666;line-height:1.4;}
+.s5 .yellow-bar{position:absolute;bottom:0;left:480px;right:0;height:6px;background:#F5C800;}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: COVER -->
+<div class="page s1" data-document-role="page" data-label="Cover">
+  <div class="grid-bg"></div>
+  <div class="corner tl"></div>
+  <div class="corner tr"></div>
+  <div class="corner bl"></div>
+  <div class="corner br"></div>
+  <div class="tag1">CAMPAIGN CONCEPTS 2025</div>
+  <div class="glitch-title">
+    <h1>TWO<br><span>IDEAS.</span><br>ONE DECK.</h1>
+    <div class="sub">The Quiet Riot &nbsp;·&nbsp; Welcome to [REDACTED]</div>
+  </div>
+  <div class="tag2">SoFi Stadium · Hollywood Park · Digital Marketing</div>
+</div>
+
+<!-- SLIDE 2: Acoustic Glitch — Scenario + Concept -->
+<div class="page s2" data-document-role="page" data-label="The Quiet Riot — Concept">
+  <div class="left">
+    <div class="cam-label"><span class="cam-dot"></span>LIVE 22:00</div>
+    <div class="campaign-name">THE<br><span>QUIET</span><br>RIOT</div>
+    <span class="vibe-tag">COOL &amp; FUNKY</span>
+    <div class="scenario-label">THE SCENARIO</div>
+    <div class="scenario-text">Stadium forced to cut sound after 10PM due to city curfew laws. Instead of apologizing — they own it.</div>
+  </div>
+  <div class="right">
+    <div class="right-label">CREATIVE EXECUTION</div>
+    <div class="execution-cards">
+      <div class="ecard">
+        <div class="ecard-label">10:00 PM — The Glitch</div>
+        <div class="ecard-text">LED exterior screens "glitch out" and display a massive mute icon. The restriction becomes the spectacle.</div>
+      </div>
+      <div class="ecard">
+        <div class="ecard-label">The Social Drop</div>
+        <div class="ecard-text">Stadium posts a reel: lights pulsing in total silence. Caption: "If you know, you know. Sound down, energy up."</div>
+      </div>
+      <div class="ecard">
+        <div class="ecard-label">The Stunt — Silent Disco</div>
+        <div class="ecard-text">Final 30 mins = 70,000-person silent disco. Custom LED headphones sync to the live feed. Dark outside. Glowing rave inside.</div>
+      </div>
+    </div>
+  </div>
+  <div class="noise"></div>
+</div>
+
+<!-- SLIDE 3: Acoustic Glitch — Visuals & Impact -->
+<div class="page s3" data-document-role="page" data-label="The Quiet Riot — Impact">
+  <div class="top-bar">
+    <span class="tb-item active">IMPACT</span>
+    <span class="tb-item">·</span>
+    <span class="tb-item">CHANNEL STRATEGY</span>
+    <span class="tb-item">·</span>
+    <span class="tb-item">THE QUIET RIOT</span>
+  </div>
+  <div class="content">
+    <div class="cell">
+      <div>
+        <div class="cell-num">01</div>
+        <div class="cell-icon">🎧</div>
+        <div class="cell-head">The Stunt</div>
+        <div class="cell-body">70,000 LED headphones. Record-breaking silent disco. The contrast goes viral the second someone films it from outside.</div>
+      </div>
+    </div>
+    <div class="cell highlight">
+      <div>
+        <div class="cell-num" style="color:#00CC50;">02</div>
+        <div class="cell-icon">📱</div>
+        <div class="cell-head">Virality Engine</div>
+        <div class="cell-body">The "dark stadium, glowing crowd" shot is a TikTok moment by design. UGC does the distribution for free.</div>
+      </div>
+    </div>
+    <div class="cell">
+      <div>
+        <div class="cell-num">03</div>
+        <div class="cell-icon">🤝</div>
+        <div class="cell-head">Brand Partnership</div>
+        <div class="cell-body">Audio tech brand co-sponsors the headphones — shared press, shared cost, double the reach.</div>
+      </div>
+    </div>
+  </div>
+  <div class="glitch-bar"></div>
+</div>
+
+<!-- SLIDE 4: Redacted — Scenario -->
+<div class="page s4" data-document-role="page" data-label="Welcome to REDACTED — Concept">
+  <div class="header">
+    <div class="header-title">WELCOME TO</div>
+    <div class="header-bar">█████████ PARK</div>
+  </div>
+  <div class="body">
+    <div class="left-body">
+      <div class="scenario-lbl">THE SCENARIO</div>
+      <div class="scenario-txt">FIFA World Cup or Olympics forces Hollywood Park to drop its name on all broadcasts. It becomes "Los Angeles Zone 4." So they lean all the way in.</div>
+      <div class="redact-label">NAME CHANGE ACROSS ALL PLATFORMS</div>
+      <div style="margin-top:12px;">
+        <div class="redact-block redact-lg"></div>
+        <div class="redact-block redact-md"></div>
+        <div class="redact-block redact-sm"></div>
+      </div>
+      <div class="venue-tag">
+        <div>
+          <div class="venue-name">HOLLYWOOD PARK</div>
+          <div class="venue-sub">→ YouTube Theater · SoFi Stadium</div>
+        </div>
+      </div>
+    </div>
+    <div class="right-body">
+      <div class="vibe-section">
+        <div class="vibe-lbl">THE VIBE</div>
+        <div class="vibe-pills">
+          <span class="pill black">Chic</span>
+          <span class="pill yellow">Censored</span>
+          <span class="pill outline">Editorial</span>
+          <span class="pill black">Minimal</span>
+          <span class="pill outline">Monochrome</span>
+        </div>
+      </div>
+      <div style="margin-top:32px;">
+        <div class="scenario-lbl">THE HOOK</div>
+        <div class="scenario-txt" style="font-family:'Caveat',cursive;font-size:19px;color:#333;line-height:1.6;margin-top:8px;">Turn a temporary loss of identity into a cult fashion statement. Make censorship look expensive.</div>
+      </div>
+      <div style="margin-top:24px;">
+        <div class="scenario-lbl">CAMPAIGN NAME</div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:48px;color:#0A0A0A;letter-spacing:0.03em;margin-top:6px;">WELCOME TO [REDACTED]</div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-tape"></div>
+</div>
+
+<!-- SLIDE 5: Redacted — Execution -->
+<div class="page s5" data-document-role="page" data-label="Welcome to REDACTED — Execution">
+  <div class="left-col">
+    <div class="campaign-title">THE<br><span class="redact">REDACT</span><br>ED<br>PLAYBOOK</div>
+    <div class="hook-label">THE MERCH DROP</div>
+    <div class="hook-text">Limited hoodies + hats. Stadium silhouette covered by a thick embroidered redaction bar. Cult streetwear from a corporate rule.</div>
+    <div class="merch-tag"><span>Limited Edition Drop →</span></div>
+  </div>
+  <div class="right-col">
+    <div class="right-label">EXECUTION ACROSS EVERY TOUCHPOINT</div>
+    <div class="exec-list">
+      <div class="exec-item">
+        <div class="exec-num">01</div>
+        <div class="exec-content">
+          <div class="exec-head">Digital Identity Shift</div>
+          <div class="exec-body">Google Maps, Apple Maps, all social handles change to literal black sensor bars: [█████████ Park]. Instagram PFP becomes a pixelated aerial of the stadium roof.</div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">02</div>
+        <div class="exec-content">
+          <div class="exec-head">Physical Touchpoints</div>
+          <div class="exec-body">Staff wear plain black shirts with yellow "CENSORED" text blocks. Concession stands serve food in plain white boxes stamped "Generic Hot Dog for Event Use Only."</div>
+        </div>
+      </div>
+      <div class="exec-item">
+        <div class="exec-num">03</div>
+        <div class="exec-content">
+          <div class="exec-head">The Levi's Playbook</div>
+          <div class="exec-body">Copy how Levi's thrived under logo restrictions at the Olympics. Make the absence of identity become the identity. Restriction = brand mystique.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="yellow-bar"></div>
+</div>
+
+</body>
+</html>
