@@ -3,24 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Bebas+Neue&family=Playfair+Display:ital@1&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0;}
 .page{width:1280px;height:720px;position:relative;overflow:hidden;font-family:'Space Mono',monospace;}
 
 /* ========= SLIDE 1: COVER ========= */
-.s1{background:#0A0A0A;}
-.s1 .grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,255,100,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(0,255,100,0.06) 1px,transparent 1px);background-size:40px 40px;}
-.s1 .glitch-title{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;}
-.s1 .glitch-title h1{font-family:'Bebas Neue',sans-serif;font-size:110px;color:#fff;letter-spacing:0.05em;line-height:0.9;text-shadow:3px 0 #00FF64, -3px 0 #FF003C;}
-.s1 .glitch-title h1 span{color:#00FF64;}
-.s1 .sub{font-family:'Space Mono',monospace;font-size:13px;color:#555;letter-spacing:0.2em;text-transform:uppercase;margin-top:20px;}
-.s1 .tag1{position:absolute;top:40px;left:48px;background:#00FF64;color:#0A0A0A;font-family:'Space Mono',monospace;font-size:10px;font-weight:700;padding:4px 12px;letter-spacing:0.15em;}
-.s1 .tag2{position:absolute;bottom:40px;right:48px;border:1px solid #222;color:#444;font-size:10px;padding:4px 12px;letter-spacing:0.15em;}
-.s1 .corner{position:absolute;width:60px;height:60px;border-color:#00FF64;border-style:solid;}
-.s1 .tl{top:28px;left:28px;border-width:2px 0 0 2px;}
-.s1 .tr{top:28px;right:28px;border-width:2px 2px 0 0;}
-.s1 .bl{bottom:28px;left:28px;border-width:0 0 2px 2px;}
-.s1 .br{bottom:28px;right:28px;border-width:0 2px 2px 0;}
+.s1{background:#FAFAF8;}
+.s1 .cover-inner{position:absolute;top:50%;left:80px;transform:translateY(-50%);}
+.s1 .cover-eyebrow{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:#999;margin-bottom:24px;}
+.s1 .cover-title{font-family:'DM Serif Display',serif;font-size:80px;color:#1A1A1A;line-height:1.0;font-weight:400;}
+.s1 .cover-title em{font-style:italic;color:#555;}
+.s1 .cover-divider{width:48px;height:1.5px;background:#1A1A1A;margin:28px 0;}
+.s1 .cover-sub{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;color:#777;line-height:1.8;letter-spacing:0.01em;}
+.s1 .cover-sub span{color:#1A1A1A;font-weight:500;}
+.s1 .cover-meta{position:absolute;bottom:44px;left:80px;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#BBBBBB;}
+.s1 .cover-right{position:absolute;right:0;top:0;width:3px;height:100%;background:#1A1A1A;}
 
 /* ========= SLIDE 2: Acoustic Glitch — Scenario ========= */
 .s2{background:#080808;}
@@ -111,17 +108,17 @@
 
 <!-- SLIDE 1: COVER -->
 <div class="page s1" data-document-role="page" data-label="Cover">
-  <div class="grid-bg"></div>
-  <div class="corner tl"></div>
-  <div class="corner tr"></div>
-  <div class="corner bl"></div>
-  <div class="corner br"></div>
-  <div class="tag1">CAMPAIGN CONCEPTS 2025</div>
-  <div class="glitch-title">
-    <h1>IDEAS<br><span>IN PROGRESS.</span><br>QUICK INFO DECK.</h1>
-    <div class="sub">The Quiet Riot &nbsp;·&nbsp; Welcome to [REDACTED]</div>
+  <div class="cover-right"></div>
+  <div class="cover-inner">
+    <div class="cover-eyebrow">Digital Marketing &nbsp;·&nbsp; Hollywood Park &nbsp;·&nbsp; 2025</div>
+    <div class="cover-title">Campaign<br><em>Concepts</em><br>& Ideas</div>
+    <div class="cover-divider"></div>
+    <div class="cover-sub">
+      <span>01 &nbsp;The Quiet Riot</span> — Acoustic Glitch Campaign<br>
+      <span>02 &nbsp;Welcome to [REDACTED]</span> — Redacted Venue Campaign
+    </div>
   </div>
-  <div class="tag2">SoFi Stadium · Hollywood Park · Digital Marketing</div>
+  <div class="cover-meta">SoFi Stadium &nbsp;·&nbsp; YouTube Theater &nbsp;·&nbsp; Inglewood, CA</div>
 </div>
 
 <!-- SLIDE 2: Acoustic Glitch — Scenario + Concept -->
@@ -145,8 +142,8 @@
         <div class="ecard-text">Stadium posts a reel: lights pulsing in total silence. Caption: "If you know, you know. Sound down, energy up."</div>
       </div>
       <div class="ecard">
-        <div class="ecard-label">The Stunt — Silent Disco</div>
-        <div class="ecard-text">Final 30 mins = 70,000-person silent disco. Custom LED headphones sync to the live feed. Dark outside. Glowing rave inside.</div>
+        <div class="ecard-label">The Stunt — Silent Disco (if feasible)</div>
+        <div class="ecard-text">Scale down to an exclusive after-party at YouTube Theater or American Airlines Plaza — a few hundred people, LED headphones synced to a DJ set. Dark outside, glowing inside. Built to be filmed.</div>
       </div>
     </div>
   </div>
@@ -167,8 +164,8 @@
       <div>
         <div class="cell-num">01</div>
         <div class="cell-icon">🎧</div>
-        <div class="cell-head">The Stunt</div>
-        <div class="cell-body">70,000 LED headphones. Record-breaking silent disco. The contrast goes viral the second someone films it from outside.</div>
+        <div class="cell-head">The Stunt (if feasible)</div>
+        <div class="cell-body">Scaled-down silent disco at YouTube Theater or the Plaza. Intimate, logistically doable, and still a TikTok moment by design.</div>
       </div>
     </div>
     <div class="cell highlight">
